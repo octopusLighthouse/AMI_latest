@@ -1,4 +1,4 @@
-data "aws_ami" "amazon_linux_2" {
+data "aws_ami" "amazon_linux" {
     owners = ["137112412989"]
     most_recent = true
     filter {
@@ -7,6 +7,6 @@ data "aws_ami" "amazon_linux_2" {
     }
 }
 
-output "founded_ubuntu_ami_value" {
+output "latest_amazon_linux_ami_id" {
   value = data.aws_ami.amazon_linux_2.id
 }
